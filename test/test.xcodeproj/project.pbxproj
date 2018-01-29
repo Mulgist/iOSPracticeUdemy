@@ -7,33 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		04528268201735A3006A2DCB /* BorderButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04528267201735A3006A2DCB /* BorderButton.swift */; };
-		04AC12B520172D550003670E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AC12B420172D550003670E /* AppDelegate.swift */; };
-		04AC12B720172D550003670E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AC12B620172D550003670E /* ViewController.swift */; };
-		04AC12BA20172D550003670E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04AC12B820172D550003670E /* Main.storyboard */; };
-		04AC12BC20172D550003670E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04AC12BB20172D550003670E /* Assets.xcassets */; };
-		04AC12BF20172D550003670E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04AC12BD20172D550003670E /* LaunchScreen.storyboard */; };
-		04DAA17C201F044A003D91C3 /* LeagueVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DAA17B201F044A003D91C3 /* LeagueVC.swift */; };
-		04DAA17E201F0467003D91C3 /* SkillVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DAA17D201F0467003D91C3 /* SkillVC.swift */; };
-		04DAA182201F0CD9003D91C3 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DAA181201F0CD9003D91C3 /* Player.swift */; };
+		040010BD201BAF68004872D7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040010BC201BAF68004872D7 /* AppDelegate.swift */; };
+		040010BF201BAF68004872D7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040010BE201BAF68004872D7 /* ViewController.swift */; };
+		040010C2201BAF68004872D7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 040010C0201BAF68004872D7 /* Main.storyboard */; };
+		040010C4201BAF68004872D7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 040010C3201BAF68004872D7 /* Assets.xcassets */; };
+		040010C7201BAF68004872D7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 040010C5201BAF68004872D7 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		04528267201735A3006A2DCB /* BorderButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderButton.swift; sourceTree = "<group>"; };
-		04AC12B120172D550003670E /* app-swoosh.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "app-swoosh.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		04AC12B420172D550003670E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		04AC12B620172D550003670E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		04AC12B920172D550003670E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		04AC12BB20172D550003670E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		04AC12BE20172D550003670E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		04AC12C020172D550003670E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		04DAA17B201F044A003D91C3 /* LeagueVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeagueVC.swift; sourceTree = "<group>"; };
-		04DAA17D201F0467003D91C3 /* SkillVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillVC.swift; sourceTree = "<group>"; };
-		04DAA181201F0CD9003D91C3 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		040010B9201BAF67004872D7 /* test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = test.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		040010BC201BAF68004872D7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		040010BE201BAF68004872D7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		040010C1201BAF68004872D7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		040010C3201BAF68004872D7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		040010C6201BAF68004872D7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		040010C8201BAF68004872D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		04AC12AE20172D550003670E /* Frameworks */ = {
+		040010B6201BAF67004872D7 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -43,100 +35,72 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0452826620173534006A2DCB /* View */ = {
+		040010B0201BAF67004872D7 = {
 			isa = PBXGroup;
 			children = (
-				04528267201735A3006A2DCB /* BorderButton.swift */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		04AC12A820172D550003670E = {
-			isa = PBXGroup;
-			children = (
-				04AC12B320172D550003670E /* app-swoosh */,
-				04AC12B220172D550003670E /* Products */,
+				040010BB201BAF68004872D7 /* test */,
+				040010BA201BAF67004872D7 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		04AC12B220172D550003670E /* Products */ = {
+		040010BA201BAF67004872D7 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				04AC12B120172D550003670E /* app-swoosh.app */,
+				040010B9201BAF67004872D7 /* test.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		04AC12B320172D550003670E /* app-swoosh */ = {
+		040010BB201BAF68004872D7 /* test */ = {
 			isa = PBXGroup;
 			children = (
-				04DAA17A201F0223003D91C3 /* Model */,
-				04DAA179201F0217003D91C3 /* Controller */,
-				0452826620173534006A2DCB /* View */,
-				04AC12B420172D550003670E /* AppDelegate.swift */,
-				04AC12B820172D550003670E /* Main.storyboard */,
-				04AC12BB20172D550003670E /* Assets.xcassets */,
-				04AC12BD20172D550003670E /* LaunchScreen.storyboard */,
-				04AC12C020172D550003670E /* Info.plist */,
+				040010BC201BAF68004872D7 /* AppDelegate.swift */,
+				040010BE201BAF68004872D7 /* ViewController.swift */,
+				040010C0201BAF68004872D7 /* Main.storyboard */,
+				040010C3201BAF68004872D7 /* Assets.xcassets */,
+				040010C5201BAF68004872D7 /* LaunchScreen.storyboard */,
+				040010C8201BAF68004872D7 /* Info.plist */,
 			);
-			path = "app-swoosh";
-			sourceTree = "<group>";
-		};
-		04DAA179201F0217003D91C3 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				04AC12B620172D550003670E /* ViewController.swift */,
-				04DAA17B201F044A003D91C3 /* LeagueVC.swift */,
-				04DAA17D201F0467003D91C3 /* SkillVC.swift */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		04DAA17A201F0223003D91C3 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				04DAA181201F0CD9003D91C3 /* Player.swift */,
-			);
-			path = Model;
+			path = test;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		04AC12B020172D550003670E /* app-swoosh */ = {
+		040010B8201BAF67004872D7 /* test */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 04AC12C320172D550003670E /* Build configuration list for PBXNativeTarget "app-swoosh" */;
+			buildConfigurationList = 040010CB201BAF68004872D7 /* Build configuration list for PBXNativeTarget "test" */;
 			buildPhases = (
-				04AC12AD20172D550003670E /* Sources */,
-				04AC12AE20172D550003670E /* Frameworks */,
-				04AC12AF20172D550003670E /* Resources */,
+				040010B5201BAF67004872D7 /* Sources */,
+				040010B6201BAF67004872D7 /* Frameworks */,
+				040010B7201BAF67004872D7 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "app-swoosh";
-			productName = "app-swoosh";
-			productReference = 04AC12B120172D550003670E /* app-swoosh.app */;
+			name = test;
+			productName = test;
+			productReference = 040010B9201BAF67004872D7 /* test.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		04AC12A920172D550003670E /* Project object */ = {
+		040010B1201BAF67004872D7 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0920;
 				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = "이주원";
 				TargetAttributes = {
-					04AC12B020172D550003670E = {
+					040010B8201BAF67004872D7 = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
 					};
 				};
 			};
-			buildConfigurationList = 04AC12AC20172D550003670E /* Build configuration list for PBXProject "app-swoosh" */;
+			buildConfigurationList = 040010B4201BAF67004872D7 /* Build configuration list for PBXProject "test" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -144,58 +108,54 @@
 				en,
 				Base,
 			);
-			mainGroup = 04AC12A820172D550003670E;
-			productRefGroup = 04AC12B220172D550003670E /* Products */;
+			mainGroup = 040010B0201BAF67004872D7;
+			productRefGroup = 040010BA201BAF67004872D7 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				04AC12B020172D550003670E /* app-swoosh */,
+				040010B8201BAF67004872D7 /* test */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		04AC12AF20172D550003670E /* Resources */ = {
+		040010B7201BAF67004872D7 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				04AC12BF20172D550003670E /* LaunchScreen.storyboard in Resources */,
-				04AC12BC20172D550003670E /* Assets.xcassets in Resources */,
-				04AC12BA20172D550003670E /* Main.storyboard in Resources */,
+				040010C7201BAF68004872D7 /* LaunchScreen.storyboard in Resources */,
+				040010C4201BAF68004872D7 /* Assets.xcassets in Resources */,
+				040010C2201BAF68004872D7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		04AC12AD20172D550003670E /* Sources */ = {
+		040010B5201BAF67004872D7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				04AC12B720172D550003670E /* ViewController.swift in Sources */,
-				04DAA17C201F044A003D91C3 /* LeagueVC.swift in Sources */,
-				04AC12B520172D550003670E /* AppDelegate.swift in Sources */,
-				04DAA17E201F0467003D91C3 /* SkillVC.swift in Sources */,
-				04DAA182201F0CD9003D91C3 /* Player.swift in Sources */,
-				04528268201735A3006A2DCB /* BorderButton.swift in Sources */,
+				040010BF201BAF68004872D7 /* ViewController.swift in Sources */,
+				040010BD201BAF68004872D7 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		04AC12B820172D550003670E /* Main.storyboard */ = {
+		040010C0201BAF68004872D7 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				04AC12B920172D550003670E /* Base */,
+				040010C1201BAF68004872D7 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		04AC12BD20172D550003670E /* LaunchScreen.storyboard */ = {
+		040010C5201BAF68004872D7 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				04AC12BE20172D550003670E /* Base */,
+				040010C6201BAF68004872D7 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -203,7 +163,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		04AC12C120172D550003670E /* Debug */ = {
+		040010C9201BAF68004872D7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -260,7 +220,7 @@
 			};
 			name = Debug;
 		};
-		04AC12C220172D550003670E /* Release */ = {
+		040010CA201BAF68004872D7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -310,64 +270,62 @@
 			};
 			name = Release;
 		};
-		04AC12C420172D550003670E /* Debug */ = {
+		040010CC201BAF68004872D7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7969E97WVC;
-				INFOPLIST_FILE = "app-swoosh/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				INFOPLIST_FILE = test/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "net.juwon.app-swoosh";
+				PRODUCT_BUNDLE_IDENTIFIER = net.juwon.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = 2;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		04AC12C520172D550003670E /* Release */ = {
+		040010CD201BAF68004872D7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7969E97WVC;
-				INFOPLIST_FILE = "app-swoosh/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				INFOPLIST_FILE = test/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "net.juwon.app-swoosh";
+				PRODUCT_BUNDLE_IDENTIFIER = net.juwon.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = 2;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		04AC12AC20172D550003670E /* Build configuration list for PBXProject "app-swoosh" */ = {
+		040010B4201BAF67004872D7 /* Build configuration list for PBXProject "test" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				04AC12C120172D550003670E /* Debug */,
-				04AC12C220172D550003670E /* Release */,
+				040010C9201BAF68004872D7 /* Debug */,
+				040010CA201BAF68004872D7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		04AC12C320172D550003670E /* Build configuration list for PBXNativeTarget "app-swoosh" */ = {
+		040010CB201BAF68004872D7 /* Build configuration list for PBXNativeTarget "test" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				04AC12C420172D550003670E /* Debug */,
-				04AC12C520172D550003670E /* Release */,
+				040010CC201BAF68004872D7 /* Debug */,
+				040010CD201BAF68004872D7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 04AC12A920172D550003670E /* Project object */;
+	rootObject = 040010B1201BAF67004872D7 /* Project object */;
 }
