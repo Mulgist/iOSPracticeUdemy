@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  test
+//  window-shopper
 //
-//  Created by 이주원 on 2018. 1. 27..
+//  Created by 이주원 on 2018. 2. 1..
 //  Copyright © 2018년 이주원. All rights reserved.
 //
 
