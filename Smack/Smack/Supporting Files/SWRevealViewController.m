@@ -656,14 +656,17 @@ const int FrontViewPositionNone = 0xff;
     _stableDragOnLeftOverdraw = NO;
     _presentFrontViewHierarchically = NO;
     _quickFlickVelocity = 250.0f;
-    _toggleAnimationDuration = 0.3;
+    _toggleAnimationDuration = 0.5;
     _toggleAnimationType = SWRevealToggleAnimationTypeSpring;
     _springDampingRatio = 1;
     _replaceViewAnimationDuration = 0.25;
     _frontViewShadowRadius = 2.5f;
     _frontViewShadowOffset = CGSizeMake(0.0f, 2.5f);
     _frontViewShadowOpacity = 1.0f;
-    _frontViewShadowColor = [UIColor blackColor];
+    _frontViewShadowColor = [UIColor colorWithRed:74.0f/255.0f
+                                            green:77.0f/255.0f
+                                             blue:216.0f/255.0f
+                                            alpha:1.0f];
     _userInteractionStore = YES;
     _animationQueue = [NSMutableArray array];
     _draggableBorderWidth = 0.0f;
