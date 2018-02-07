@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		02C0431A443BBEDD45E6E540 /* Pods_Smack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B16F34DC4EF5A188BEF86BFB /* Pods_Smack.framework */; };
+		04B704DC202B2BA20020EA30 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B704DB202B2BA20020EA30 /* AuthService.swift */; };
+		04B704DE202B67870020EA30 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B704DD202B67870020EA30 /* RoundedButton.swift */; };
 		04CF6EFC20287DA600658594 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CF6EFB20287DA600658594 /* AppDelegate.swift */; };
 		04CF6F0120287DA600658594 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04CF6EFF20287DA600658594 /* Main.storyboard */; };
 		04CF6F0320287DA600658594 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04CF6F0220287DA600658594 /* Assets.xcassets */; };
@@ -22,6 +24,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		04B704DB202B2BA20020EA30 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		04B704DD202B67870020EA30 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		04CF6EF820287DA600658594 /* Smack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Smack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04CF6EFB20287DA600658594 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04CF6F0020287DA600658594 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -54,6 +58,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		04B704DA202B2B7E0020EA30 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				04B704DB202B2BA20020EA30 /* AuthService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		04CF6EEF20287DA600658594 = {
 			isa = PBXGroup;
 			children = (
@@ -75,6 +87,7 @@
 		04CF6EFA20287DA600658594 /* Smack */ = {
 			isa = PBXGroup;
 			children = (
+				04B704DA202B2B7E0020EA30 /* Services */,
 				04FF96982029B7C600F1EE70 /* Utilities */,
 				04ECACD720298DFC00F4E8C4 /* View */,
 				04ECACD620298DF200F4E8C4 /* Model */,
@@ -121,6 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				04FF969620299EC300F1EE70 /* GradientView.swift */,
+				04B704DD202B67870020EA30 /* RoundedButton.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -287,10 +301,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				04ECACDB20298E5500F4E8C4 /* ChannelVC.swift in Sources */,
+				04B704DE202B67870020EA30 /* RoundedButton.swift in Sources */,
 				04ECACD920298E2D00F4E8C4 /* ChatVC.swift in Sources */,
 				04FF969E2029D38500F1EE70 /* CreateAccountVC.swift in Sources */,
 				04FF969C2029BD8100F1EE70 /* LoginVC.swift in Sources */,
 				04FF969720299EC300F1EE70 /* GradientView.swift in Sources */,
+				04B704DC202B2BA20020EA30 /* AuthService.swift in Sources */,
 				04CF6EFC20287DA600658594 /* AppDelegate.swift in Sources */,
 				04ECACD4202980D100F4E8C4 /* SWRevealViewController.m in Sources */,
 				04FF969A2029B7DF00F1EE70 /* Constants.swift in Sources */,

@@ -10,7 +10,7 @@ import UIKit
 
 extension UIDevice {
     public var isiPhone: Bool {
-        if UIDevice.current.userInterfaceIdiom == UIUserInterfaceIdiom.pad {
+        if UIDevice.current.userInterfaceIdiom == UIUserInterfaceIdiom.phone {
             return true
         }
         return false
