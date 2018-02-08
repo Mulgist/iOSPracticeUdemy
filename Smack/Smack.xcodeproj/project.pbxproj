@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		02C0431A443BBEDD45E6E540 /* Pods_Smack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B16F34DC4EF5A188BEF86BFB /* Pods_Smack.framework */; };
+		04B07835202C5B09001EE33F /* UserDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B07834202C5B09001EE33F /* UserDataService.swift */; };
 		04B704DC202B2BA20020EA30 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B704DB202B2BA20020EA30 /* AuthService.swift */; };
 		04B704DE202B67870020EA30 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B704DD202B67870020EA30 /* RoundedButton.swift */; };
 		04CF6EFC20287DA600658594 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CF6EFB20287DA600658594 /* AppDelegate.swift */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		04B07834202C5B09001EE33F /* UserDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataService.swift; sourceTree = "<group>"; };
 		04B704DB202B2BA20020EA30 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		04B704DD202B67870020EA30 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		04CF6EF820287DA600658594 /* Smack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Smack.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -62,6 +64,7 @@
 			isa = PBXGroup;
 			children = (
 				04B704DB202B2BA20020EA30 /* AuthService.swift */,
+				04B07834202C5B09001EE33F /* UserDataService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -303,6 +306,7 @@
 				04ECACDB20298E5500F4E8C4 /* ChannelVC.swift in Sources */,
 				04B704DE202B67870020EA30 /* RoundedButton.swift in Sources */,
 				04ECACD920298E2D00F4E8C4 /* ChatVC.swift in Sources */,
+				04B07835202C5B09001EE33F /* UserDataService.swift in Sources */,
 				04FF969E2029D38500F1EE70 /* CreateAccountVC.swift in Sources */,
 				04FF969C2029BD8100F1EE70 /* LoginVC.swift in Sources */,
 				04FF969720299EC300F1EE70 /* GradientView.swift in Sources */,
