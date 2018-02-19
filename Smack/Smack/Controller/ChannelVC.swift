@@ -45,6 +45,10 @@ class ChannelVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         
         // NotificationCenter의 옵저버 추가. NOTIF_USER_DATA_DID_CHANGE이라는 name으로 식별하며 전달받을시 userDataDidChange() 수행.
         NotificationCenter.default.addObserver(self, selector: #selector(ChannelVC.userDataDidChange(_:)), name: NOTIF_USER_DATA_DID_CHANGE, object: nil)
+        
+        SocketService.instance.getChannel { (success) in
+            self.tableView.reloadData()
+        }
     }
     
     override func viewDidAppear(_ animated: Bool) {

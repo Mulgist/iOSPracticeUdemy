@@ -33,12 +33,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.
     }
 
+    // 83강(Socket)시 수정함
     func applicationDidBecomeActive(_ application: UIApplication) {
-        // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+        // 응용 프로그램이 비활성 상태 일 때 일시 중지되었거나 아직 시작되지 않은 모든 작업을 다시 시작하십시오. 응용 프로그램이 백그라운드에서 이전에 있었던 경우 선택적으로 사용자 인터페이스를 새로 고칩니다.
+        SocketService.instance.establishConnection()
     }
 
+    // 83강(Socket)시 수정함
     func applicationWillTerminate(_ application: UIApplication) {
-        // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+        // 응용 프로그램이 곧 종료 될 때 호출됩니다. 적절한 경우 데이터를 저장하십시오. applicationDidEnterBackground를 참조하십시오.
+        SocketService.instance.closeConnection()
     }
 
 

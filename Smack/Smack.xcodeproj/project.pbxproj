@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		02C0431A443BBEDD45E6E540 /* Pods_Smack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B16F34DC4EF5A188BEF86BFB /* Pods_Smack.framework */; };
+		0436183B203AD3480063D624 /* SocketService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0436183A203AD3480063D624 /* SocketService.swift */; };
 		04A5EB7E20383B3600CBE4F2 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A5EB7C20383B3600CBE4F2 /* ProfileVC.swift */; };
 		04A5EB7F20383B3600CBE4F2 /* ProfileVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04A5EB7D20383B3600CBE4F2 /* ProfileVC.xib */; };
 		04B07835202C5B09001EE33F /* UserDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B07834202C5B09001EE33F /* UserDataService.swift */; };
@@ -35,6 +36,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0436183A203AD3480063D624 /* SocketService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketService.swift; sourceTree = "<group>"; };
 		04A5EB7C20383B3600CBE4F2 /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
 		04A5EB7D20383B3600CBE4F2 /* ProfileVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileVC.xib; sourceTree = "<group>"; };
 		04B07834202C5B09001EE33F /* UserDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataService.swift; sourceTree = "<group>"; };
@@ -95,6 +97,7 @@
 				04B704DB202B2BA20020EA30 /* AuthService.swift */,
 				04B07834202C5B09001EE33F /* UserDataService.swift */,
 				04FF86512039919300657B19 /* MessageService.swift */,
+				0436183A203AD3480063D624 /* SocketService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -343,6 +346,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0436183B203AD3480063D624 /* SocketService.swift in Sources */,
 				04A5EB7E20383B3600CBE4F2 /* ProfileVC.swift in Sources */,
 				04FF86562039A84C00657B19 /* ChannelCell.swift in Sources */,
 				04ECACDB20298E5500F4E8C4 /* ChannelVC.swift in Sources */,
