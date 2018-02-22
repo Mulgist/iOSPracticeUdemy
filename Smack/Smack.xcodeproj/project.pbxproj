@@ -15,6 +15,8 @@
 		04B704DC202B2BA20020EA30 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B704DB202B2BA20020EA30 /* AuthService.swift */; };
 		04B704DE202B67870020EA30 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B704DD202B67870020EA30 /* RoundedButton.swift */; };
 		04BFEFF420302418006A78CC /* CircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BFEFF320302418006A78CC /* CircleImage.swift */; };
+		04CE8917203EAD7D00AD1DCD /* KeyboardBoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CE8916203EAD7D00AD1DCD /* KeyboardBoundView.swift */; };
+		04CE8919203EB37900AD1DCD /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CE8918203EB37900AD1DCD /* MessageCell.swift */; };
 		04CF6EFC20287DA600658594 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CF6EFB20287DA600658594 /* AppDelegate.swift */; };
 		04CF6F0120287DA600658594 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04CF6EFF20287DA600658594 /* Main.storyboard */; };
 		04CF6F0320287DA600658594 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04CF6F0220287DA600658594 /* Assets.xcassets */; };
@@ -22,6 +24,7 @@
 		04ECACD4202980D100F4E8C4 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04ECACD3202980D100F4E8C4 /* SWRevealViewController.m */; };
 		04ECACD920298E2D00F4E8C4 /* ChatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04ECACD820298E2D00F4E8C4 /* ChatVC.swift */; };
 		04ECACDB20298E5500F4E8C4 /* ChannelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04ECACDA20298E5500F4E8C4 /* ChannelVC.swift */; };
+		04F3CBD6203C34AC0064729C /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F3CBD5203C34AC0064729C /* Message.swift */; };
 		04FE134A202F3C7B00EAA3F8 /* AvatarPickerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FE1349202F3C7B00EAA3F8 /* AvatarPickerVC.swift */; };
 		04FE134C202F3FFA00EAA3F8 /* AvatarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FE134B202F3FFA00EAA3F8 /* AvatarCell.swift */; };
 		04FF86522039919300657B19 /* MessageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FF86512039919300657B19 /* MessageService.swift */; };
@@ -43,6 +46,8 @@
 		04B704DB202B2BA20020EA30 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		04B704DD202B67870020EA30 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		04BFEFF320302418006A78CC /* CircleImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImage.swift; sourceTree = "<group>"; };
+		04CE8916203EAD7D00AD1DCD /* KeyboardBoundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardBoundView.swift; sourceTree = "<group>"; };
+		04CE8918203EB37900AD1DCD /* MessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
 		04CF6EF820287DA600658594 /* Smack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Smack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04CF6EFB20287DA600658594 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04CF6F0020287DA600658594 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -54,6 +59,7 @@
 		04ECACD3202980D100F4E8C4 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		04ECACD820298E2D00F4E8C4 /* ChatVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatVC.swift; sourceTree = "<group>"; };
 		04ECACDA20298E5500F4E8C4 /* ChannelVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelVC.swift; sourceTree = "<group>"; };
+		04F3CBD5203C34AC0064729C /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		04FE1349202F3C7B00EAA3F8 /* AvatarPickerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarPickerVC.swift; sourceTree = "<group>"; };
 		04FE134B202F3FFA00EAA3F8 /* AvatarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarCell.swift; sourceTree = "<group>"; };
 		04FF86512039919300657B19 /* MessageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageService.swift; sourceTree = "<group>"; };
@@ -167,6 +173,7 @@
 			isa = PBXGroup;
 			children = (
 				04FF8653203991C700657B19 /* Channel.swift */,
+				04F3CBD5203C34AC0064729C /* Message.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -179,6 +186,8 @@
 				04FE134B202F3FFA00EAA3F8 /* AvatarCell.swift */,
 				04BFEFF320302418006A78CC /* CircleImage.swift */,
 				04FF86552039A84C00657B19 /* ChannelCell.swift */,
+				04CE8916203EAD7D00AD1DCD /* KeyboardBoundView.swift */,
+				04CE8918203EB37900AD1DCD /* MessageCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -346,12 +355,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04CE8917203EAD7D00AD1DCD /* KeyboardBoundView.swift in Sources */,
 				0436183B203AD3480063D624 /* SocketService.swift in Sources */,
 				04A5EB7E20383B3600CBE4F2 /* ProfileVC.swift in Sources */,
 				04FF86562039A84C00657B19 /* ChannelCell.swift in Sources */,
 				04ECACDB20298E5500F4E8C4 /* ChannelVC.swift in Sources */,
 				04FE134A202F3C7B00EAA3F8 /* AvatarPickerVC.swift in Sources */,
+				04CE8919203EB37900AD1DCD /* MessageCell.swift in Sources */,
 				04B704DE202B67870020EA30 /* RoundedButton.swift in Sources */,
+				04F3CBD6203C34AC0064729C /* Message.swift in Sources */,
 				04FF8654203991C700657B19 /* Channel.swift in Sources */,
 				04BFEFF420302418006A78CC /* CircleImage.swift in Sources */,
 				04FF86522039919300657B19 /* MessageService.swift in Sources */,

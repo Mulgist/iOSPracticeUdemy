@@ -43,11 +43,21 @@ class ChannelVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             self.revealViewController().rearViewRevealWidth = self.view.frame.size.width - 120
         }
         
-        // NotificationCenter의 옵저버 추가. NOTIF_USER_DATA_DID_CHANGE이라는 name으로 식별하며 전달받을시 userDataDidChange() 수행.
+        // NotificationCenter의 옵저버 추가. 해당되는 name으로 식별하며 전달받을시 userDataDidChange() 또는 channelIsLoaded() 수행.
         NotificationCenter.default.addObserver(self, selector: #selector(ChannelVC.userDataDidChange(_:)), name: NOTIF_USER_DATA_DID_CHANGE, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(ChannelVC.channelIsLoaded(_:)), name: NOTIF_CHANNELS_LOADED, object: nil)
         
         SocketService.instance.getChannel { (success) in
-            self.tableView.reloadData()
+            if success {
+                self.tableView.reloadData()
+            }
+        }
+        
+        SocketService.instance.getChatMessage { (newMessage) in
+            if newMessage.channelId != MessageService.instance.selectedChannel?._id && AuthService.instance.isLoggedIn {
+                MessageService.instance.unreadChannels.append(newMessage.channelId)
+                self.tableView.reloadData()
+            }
         }
     }
     
@@ -70,6 +80,10 @@ class ChannelVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         setupUserInfo()
     }
     
+    @objc func channelIsLoaded(_ notif: Notification) {
+        tableView.reloadData()
+    }
+    
     func setupUserInfo() {
         if AuthService.instance.isLoggedIn {
             loginBtn.setTitle(UserDataService.instance.name, for: .normal)
@@ -79,14 +93,17 @@ class ChannelVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             loginBtn.setTitle("Login", for: .normal)
             userImg.image = UIImage(named: "menuProfileIcon")
             userImg.backgroundColor = UIColor.clear
+            tableView.reloadData()
         }
     }
     
     @IBAction func addChannelPressed(_ sender: Any) {
-        // Create Channel Page 보이기
-        let addChannel = AddChannelVC()
-        addChannel.modalPresentationStyle = .custom
-        present(addChannel, animated: true, completion: nil)
+        if AuthService.instance.isLoggedIn {
+            // Create Channel Page 보이기
+            let addChannel = AddChannelVC()
+            addChannel.modalPresentationStyle = .custom
+            present(addChannel, animated: true, completion: nil)
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -105,5 +122,21 @@ class ChannelVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return MessageService.instance.channels.count
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let channel = MessageService.instance.channels[indexPath.row]
+        MessageService.instance.selectedChannel = channel
+        
+        // Unread된 채널 봤을 때 다시 원래대로 돌리기
+        if MessageService.instance.unreadChannels.count > 0 {
+            MessageService.instance.unreadChannels = MessageService.instance.unreadChannels.filter{$0 != channel._id}
+        }
+        let index = IndexPath(row: indexPath.row, section: 0)
+        tableView.reloadRows(at: [index], with: .none)
+        tableView.selectRow(at: index, animated: false, scrollPosition: .none)
+        
+        NotificationCenter.default.post(name: NOTIF_CHANNEL_SELECTED, object: nil)
+        self.revealViewController().revealToggle(animated: true)
     }
 }
