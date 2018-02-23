@@ -7,19 +7,37 @@
 //
 
 import UIKit
+import MapKit
+import CoreLocation
 
 class MapVC: UIViewController {
-
+    @IBOutlet weak var mapView: MKMapView!
+    
+    var locationManager = CLLocationManager()
+    let authorizationStatus = CLLocationManager.authorizationStatus()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        mapView.delegate = self
+        locationManager.delegate = self
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    @IBAction func centerMapBtnWasPressed(_ sender: Any) {
+        
     }
-
-
+    
 }
 
+extension MapVC: MKMapViewDelegate {
+    
+}
+
+extension MapVC: CLLocationManagerDelegate {
+    func configureLocationServices() {
+        if authorizationStatus == .notDetermined {
+            locationManager.requestAlwaysAuthorization()
+        } else {
+            return
+        }
+    }
+}
