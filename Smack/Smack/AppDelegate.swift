@@ -10,9 +10,7 @@ import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
     var window: UIWindow?
-
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
@@ -44,7 +42,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // 응용 프로그램이 곧 종료 될 때 호출됩니다. 적절한 경우 데이터를 저장하십시오. applicationDidEnterBackground를 참조하십시오.
         SocketService.instance.closeConnection()
     }
-
-
 }
 

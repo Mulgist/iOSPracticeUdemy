@@ -31,17 +31,6 @@ class MessageService {
                 } catch let error {
                     debugPrint(error as Any)
                 }
-                
-//                if let json = JSON(data).array {
-//                    for item in json {
-//                        let name = item["name"].stringValue
-//                        let channelDescription = item["description"].stringValue
-//                        let id = item["id"].stringValue
-//                        let channel = Channel(channelTitle: name, channelDescription: channelDescription, id: id)
-//                        self.channels.append(channel)
-//                    }
-//                    completion(true)
-//                }
             } else {
                 completion(false)
                 debugPrint(response.result.error as Any)

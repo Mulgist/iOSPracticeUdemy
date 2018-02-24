@@ -10,7 +10,6 @@ import UIKit
 
 @IBDesignable
 class CircleImage: UIImageView {
-    
     override func awakeFromNib() {
         setupView()
     }
@@ -24,5 +23,4 @@ class CircleImage: UIImageView {
         super.prepareForInterfaceBuilder()
         setupView()
     }
-    
 }

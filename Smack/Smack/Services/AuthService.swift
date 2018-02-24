@@ -7,7 +7,6 @@
 //
 
 import Foundation
-// Alamofire 사용
 import Alamofire
 import SwiftyJSON
 

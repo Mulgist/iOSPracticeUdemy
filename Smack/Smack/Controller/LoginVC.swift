@@ -9,7 +9,6 @@
 import UIKit
 
 class LoginVC: UIViewController {
-
     // Outlets
     @IBOutlet weak var emailTxt: UITextField!
     @IBOutlet weak var passwordTxt: UITextField!
@@ -35,8 +34,7 @@ class LoginVC: UIViewController {
                         self.spinner.stopAnimating()
                         self.dismiss(animated: true, completion: nil)
                     }
-                })
-            }
+                })}
         }
     }
     

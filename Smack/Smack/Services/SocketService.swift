@@ -24,7 +24,6 @@ class SocketService: NSObject {
     // SocketIO Client 객체 생성. API가 Swift 4에 최적화되면서 달라져 강의 내용과는 다르게 해야 한다.
     // 강의에서의 코드: var socket: SocketIOClient = SocketIOClient(socketURL: URL(BASE_URL)!)
     
-    
     func establishConnection() {
         socket.connect()
         print("소켓 연결됨")
@@ -81,6 +80,4 @@ class SocketService: NSObject {
             completionHandler(typingUsers)
         }
     }
-    
-    
 }

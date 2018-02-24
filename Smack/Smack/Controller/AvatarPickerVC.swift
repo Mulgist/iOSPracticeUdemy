@@ -9,7 +9,6 @@
 import UIKit
 
 class AvatarPickerVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
-
     // Outlets
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var segmentControl: UISegmentedControl!
@@ -77,5 +76,4 @@ class AvatarPickerVC: UIViewController, UICollectionViewDelegate, UICollectionVi
     @IBAction func backPressed(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
-    
 }

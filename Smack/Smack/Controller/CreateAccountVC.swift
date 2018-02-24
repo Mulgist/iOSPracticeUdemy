@@ -65,8 +65,8 @@ class CreateAccountVC: UIViewController {
                         })
                     }
                 })
-//                self.alert.addAction(self.okAction)
-//                self.present(self.alert, animated: true, completion: nil)
+                // self.alert.addAction(self.okAction)
+                // self.present(self.alert, animated: true, completion: nil)
             }
         }
     }
@@ -101,5 +101,4 @@ class CreateAccountVC: UIViewController {
     @objc func handleTap() {
         view.endEditing(true)
     }
-    
 }

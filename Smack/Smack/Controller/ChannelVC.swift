@@ -24,7 +24,6 @@ extension UIDevice {
 }
 
 class ChannelVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    
     // Outlets
     @IBOutlet weak var loginBtn: UIButton!
     @IBOutlet weak var userImg: CircleImage!

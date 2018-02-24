@@ -9,7 +9,6 @@
 import UIKit
 
 class ProfileVC: UIViewController {
-
     // Outlets
     @IBOutlet weak var profileImg: UIImageView!
     @IBOutlet weak var userName: UILabel!
@@ -20,7 +19,6 @@ class ProfileVC: UIViewController {
         super.viewDidLoad()
         setupView()
     }
-    
     
     @IBAction func closeModalPressed(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
