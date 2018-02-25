@@ -48,7 +48,7 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jU8-4I-Xra">
-                                <rect key="frame" x="309" y="597" width="50" height="50"/>
+                                <rect key="frame" x="309" y="596" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="neX-xw-GGk"/>
                                     <constraint firstAttribute="height" constant="50" id="qJH-Oh-VNQ"/>
@@ -59,23 +59,25 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iU1-Xg-AHZ">
-                                <rect key="frame" x="0.0" y="667" width="375" height="0.0"/>
+                                <rect key="frame" x="0.0" y="666" width="375" height="1"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="8jf-0I-t9l"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstAttribute="bottom" secondItem="iU1-Xg-AHZ" secondAttribute="bottom" id="5FU-6b-wE4"/>
                             <constraint firstItem="wMx-8N-QyQ" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="86J-PV-XNP"/>
                             <constraint firstItem="f1j-Yq-iE2" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="8YU-Gg-IeL"/>
                             <constraint firstItem="f1j-Yq-iE2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="C8n-pi-qSv"/>
                             <constraint firstItem="wMx-8N-QyQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Jj2-n8-eIk"/>
-                            <constraint firstItem="iU1-Xg-AHZ" firstAttribute="top" secondItem="f1j-Yq-iE2" secondAttribute="bottom" id="PXP-Qj-UKM"/>
                             <constraint firstAttribute="trailing" secondItem="iU1-Xg-AHZ" secondAttribute="trailing" id="XEj-pK-gjO"/>
                             <constraint firstItem="iU1-Xg-AHZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ZRP-7e-abl"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="jU8-4I-Xra" secondAttribute="bottom" constant="20" id="cvT-MB-xcy"/>
                             <constraint firstItem="f1j-Yq-iE2" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="eVr-g9-zlP"/>
-                            <constraint firstItem="iU1-Xg-AHZ" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="qIF-u7-1xS"/>
                             <constraint firstItem="f1j-Yq-iE2" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="w9G-iN-syA"/>
+                            <constraint firstItem="iU1-Xg-AHZ" firstAttribute="top" secondItem="jU8-4I-Xra" secondAttribute="bottom" constant="20" id="x3G-Yc-ts2"/>
                             <constraint firstItem="wMx-8N-QyQ" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="xec-Lq-DPK"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jU8-4I-Xra" secondAttribute="trailing" constant="16" id="z6l-oU-BdZ"/>
                         </constraints>
@@ -83,11 +85,13 @@
                     </view>
                     <connections>
                         <outlet property="mapView" destination="f1j-Yq-iE2" id="Mqv-xB-W7G"/>
+                        <outlet property="pullUpView" destination="iU1-Xg-AHZ" id="sup-LC-F4h"/>
+                        <outlet property="pullUpViewHeightConstraint" destination="8jf-0I-t9l" id="hTJ-fw-dhd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="117.59999999999999" y="118.29085457271366"/>
+            <point key="canvasLocation" x="30" y="274"/>
         </scene>
     </scenes>
     <resources>

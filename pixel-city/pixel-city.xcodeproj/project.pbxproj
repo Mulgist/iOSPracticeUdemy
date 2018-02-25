@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		045B799420429B4000D86374 /* DroppablePin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045B799320429B4000D86374 /* DroppablePin.swift */; };
+		047F7F992042CCF00001486E /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047F7F982042CCF00001486E /* PhotoCell.swift */; };
+		047F7F9B2042F1AD0001486E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047F7F9A2042F1AD0001486E /* Constants.swift */; };
+		047F7F9D2042FB1E0001486E /* flickr-api-key.json in Resources */ = {isa = PBXBuildFile; fileRef = 047F7F9C2042FB1E0001486E /* flickr-api-key.json */; };
 		04B4C701204001D9007021FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B4C700204001D9007021FD /* AppDelegate.swift */; };
 		04B4C703204001D9007021FD /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B4C702204001D9007021FD /* MapVC.swift */; };
 		04B4C706204001D9007021FD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04B4C704204001D9007021FD /* Main.storyboard */; };
@@ -16,6 +20,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		045B799320429B4000D86374 /* DroppablePin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DroppablePin.swift; sourceTree = "<group>"; };
+		047F7F982042CCF00001486E /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
+		047F7F9A2042F1AD0001486E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		047F7F9C2042FB1E0001486E /* flickr-api-key.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "flickr-api-key.json"; sourceTree = "<group>"; };
 		04B4C6FD204001D9007021FD /* pixel-city.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "pixel-city.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		04B4C700204001D9007021FD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04B4C702204001D9007021FD /* MapVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapVC.swift; sourceTree = "<group>"; };
@@ -70,6 +78,7 @@
 				04B4C707204001D9007021FD /* Assets.xcassets */,
 				04B4C709204001D9007021FD /* LaunchScreen.storyboard */,
 				04B4C70C204001D9007021FD /* Info.plist */,
+				047F7F9C2042FB1E0001486E /* flickr-api-key.json */,
 			);
 			path = "pixel-city";
 			sourceTree = "<group>";
@@ -85,6 +94,8 @@
 		04B4C71320400245007021FD /* View */ = {
 			isa = PBXGroup;
 			children = (
+				045B799320429B4000D86374 /* DroppablePin.swift */,
+				047F7F982042CCF00001486E /* PhotoCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -99,6 +110,7 @@
 		04B4C71520400274007021FD /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				047F7F9A2042F1AD0001486E /* Constants.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -183,6 +195,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				04B4C70B204001D9007021FD /* LaunchScreen.storyboard in Resources */,
+				047F7F9D2042FB1E0001486E /* flickr-api-key.json in Resources */,
 				04B4C708204001D9007021FD /* Assets.xcassets in Resources */,
 				04B4C706204001D9007021FD /* Main.storyboard in Resources */,
 			);
@@ -251,7 +264,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				047F7F9B2042F1AD0001486E /* Constants.swift in Sources */,
+				047F7F992042CCF00001486E /* PhotoCell.swift in Sources */,
 				04B4C703204001D9007021FD /* MapVC.swift in Sources */,
+				045B799420429B4000D86374 /* DroppablePin.swift in Sources */,
 				04B4C701204001D9007021FD /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

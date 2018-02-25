@@ -26,6 +26,7 @@ xcuserdata/
 *.moved-aside
 *.xcuserstate
 *.xcscmblueprint
+pixel-city/pixel-city/flickr-api-key.json
 
 ## Obj-C/Swift specific
 *.hmap
