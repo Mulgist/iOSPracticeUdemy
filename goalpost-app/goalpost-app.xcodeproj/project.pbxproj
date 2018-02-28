@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04DA81D2204680D600FC2EC1 /* FinishGoalVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DA81D1204680D600FC2EC1 /* FinishGoalVC.swift */; };
 		04DF41C120455DD200AB4E50 /* GoalType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DF41C020455DD200AB4E50 /* GoalType.swift */; };
 		04DF41C32045726A00AB4E50 /* CreateGoalVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DF41C22045726A00AB4E50 /* CreateGoalVC.swift */; };
 		04DF41C52045755700AB4E50 /* UIViewControllerExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DF41C42045755700AB4E50 /* UIViewControllerExt.swift */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		04DA81D1204680D600FC2EC1 /* FinishGoalVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishGoalVC.swift; sourceTree = "<group>"; };
 		04DF41C020455DD200AB4E50 /* GoalType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalType.swift; sourceTree = "<group>"; };
 		04DF41C22045726A00AB4E50 /* CreateGoalVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateGoalVC.swift; sourceTree = "<group>"; };
 		04DF41C42045755700AB4E50 /* UIViewControllerExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExt.swift; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 			children = (
 				04E7CC642044200C00E3D461 /* GoalsVC.swift */,
 				04DF41C22045726A00AB4E50 /* CreateGoalVC.swift */,
+				04DA81D1204680D600FC2EC1 /* FinishGoalVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -197,6 +200,7 @@
 				04E7CC632044200C00E3D461 /* AppDelegate.swift in Sources */,
 				04DF41C52045755700AB4E50 /* UIViewControllerExt.swift in Sources */,
 				04DF41C920458A9800AB4E50 /* UIButtonExt.swift in Sources */,
+				04DA81D2204680D600FC2EC1 /* FinishGoalVC.swift in Sources */,
 				04E7CC6B2044200C00E3D461 /* goalpost_app.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
