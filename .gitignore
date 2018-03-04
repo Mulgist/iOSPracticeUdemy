@@ -27,6 +27,7 @@ xcuserdata/
 *.xcuserstate
 *.xcscmblueprint
 flickr-api-key.json
+GoogleService-Info.plist
 
 ## Obj-C/Swift specific
 *.hmap
