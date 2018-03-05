@@ -8,9 +8,15 @@
 
 import Foundation
 import Firebase
+import ADAL
 
 class AuthService {
     static let instance = AuthService()
+    
+    // Configurations
+    let MS_AUTHORITY_URL = "https://login.microsoftonline.com/common/oauth2/nativeclient" // COMMON OR YOUR TENANT ID
+    let MS_CLIENT_ID = "5abe5d72-317c-4620-8f51-68aebc7a973f" // client ID
+    let MS_REDIRECT_URI = "breakpoint://bld.juwon.breakpoint" // redirect URI
     
     func registerUser(withEmail email: String, andPassword password: String, userCreationComplete: @escaping (_ status: Bool, _ error: Error?) -> ()) {
         // Auth는 FIRAuth.h에 정의되어 있다.
@@ -33,6 +39,31 @@ class AuthService {
                 return
             }
             loginComplete(true, nil)
+        }
+    }
+    
+    // MS login (for Swift 4...)
+    func acquireToken(completion: @escaping (_ userInfo: ADUserInformation?, _ accessToken: String?, _ error: NSError?) -> Void) {
+        if let _authContext = ADAuthenticationContext(authority: MS_AUTHORITY_URL, error: nil) {
+            _authContext.acquireToken(
+                withResource: self.MS_CLIENT_ID,
+                clientId: MS_CLIENT_ID,
+                redirectUri: URL(string: self.MS_REDIRECT_URI),
+                promptBehavior: AD_PROMPT_AUTO,
+                userId: nil,
+                extraQueryParameters: "",
+                completionBlock: { (result) in
+                    if (result?.status != AD_SUCCEEDED) {
+                        completion(nil,
+                                   nil,
+                                   result?.error)
+                    } else {
+                        completion(result?.tokenCacheItem.userInformation,
+                                   result?.accessToken,
+                                   nil)
+                    }
+                }
+            )
         }
     }
 }

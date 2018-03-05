@@ -7,12 +7,18 @@
 //
 
 import UIKit
+import Firebase
 
 class AuthVC: UIViewController {
-
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        if Auth.auth().currentUser != nil {
+            dismiss(animated: true, completion: nil)
+        }
     }
     
     @IBAction func signInWithEmailBtnWasPressed(_ sender: Any) {
@@ -27,4 +33,25 @@ class AuthVC: UIViewController {
     @IBAction func googlePlusSignInWasPressed(_ sender: Any) {
         
     }
+    
+    // MS login (for Swift 4...)
+    @IBAction func microsoftSignInWasPressed(_ sender: Any) {
+        AuthService.instance.acquireToken { (userInfo, accessToken, error) in
+            if let _userInfo = userInfo {
+                DispatchQueue.main.sync() {
+                    let userLabel = UILabel()
+                    userLabel.numberOfLines = 0;
+                    userLabel.frame = CGRect(x: 25, y: 125, width: 300, height: 500)
+                    userLabel.text = "Welcome \(_userInfo.givenName) \(_userInfo.familyName)"
+                    self.view.addSubview(userLabel)
+                    
+                    print("Access Token: \(accessToken!)")
+                }
+            }
+            if let _error = error {
+                print("Error : \(_error.localizedDescription)")
+            }
+        }
+    }
+    
 }

@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04011D91204D043E009D686B /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04011D90204D043E009D686B /* FeedCell.swift */; };
+		04011D93204D059A009D686B /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04011D92204D059A009D686B /* Message.swift */; };
+		04011D95204D333B009D686B /* CreateGroupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04011D94204D333B009D686B /* CreateGroupVC.swift */; };
+		04011D97204D3AC4009D686B /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04011D96204D3AC4009D686B /* UserCell.swift */; };
 		0413D93D2047D36D00B74E38 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0413D93C2047D36D00B74E38 /* AppDelegate.swift */; };
 		0413D93F2047D36D00B74E38 /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0413D93E2047D36D00B74E38 /* FeedVC.swift */; };
 		0413D9412047D36D00B74E38 /* GroupsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0413D9402047D36D00B74E38 /* GroupsVC.swift */; };
@@ -27,6 +31,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		04011D90204D043E009D686B /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
+		04011D92204D059A009D686B /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		04011D94204D333B009D686B /* CreateGroupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateGroupVC.swift; sourceTree = "<group>"; };
+		04011D96204D3AC4009D686B /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		0413D9392047D36D00B74E38 /* breakpoint.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = breakpoint.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0413D93C2047D36D00B74E38 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0413D93E2047D36D00B74E38 /* FeedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
@@ -107,6 +115,7 @@
 				04E7C115204B92CE004577C1 /* LoginVC.swift */,
 				04E7C11D204C001C004577C1 /* MeVC.swift */,
 				04E7C11F204C1DF8004577C1 /* CreatePostVC.swift */,
+				04011D94204D333B009D686B /* CreateGroupVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -116,6 +125,8 @@
 			children = (
 				04E7C117204B9334004577C1 /* InsetTextField.swift */,
 				04E7C119204BAA62004577C1 /* ShadowView.swift */,
+				04011D90204D043E009D686B /* FeedCell.swift */,
+				04011D96204D3AC4009D686B /* UserCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -123,6 +134,7 @@
 		0413D9522047D36D00B74E38 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				04011D92204D059A009D686B /* Message.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -255,6 +267,7 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-breakpoint/Pods-breakpoint-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/ADAL/ADAL.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
@@ -262,6 +275,7 @@
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ADAL.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
@@ -298,17 +312,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				04E7C122204C3B49004577C1 /* UIViewExt.swift in Sources */,
+				04011D91204D043E009D686B /* FeedCell.swift in Sources */,
 				04E7C11E204C001C004577C1 /* MeVC.swift in Sources */,
 				04E7C118204B9334004577C1 /* InsetTextField.swift in Sources */,
 				04E7C114204B9283004577C1 /* AuthVC.swift in Sources */,
 				0413D9412047D36D00B74E38 /* GroupsVC.swift in Sources */,
 				04E7C11C204BAD8E004577C1 /* AuthService.swift in Sources */,
 				04E7C116204B92CE004577C1 /* LoginVC.swift in Sources */,
+				04011D97204D3AC4009D686B /* UserCell.swift in Sources */,
+				04011D95204D333B009D686B /* CreateGroupVC.swift in Sources */,
 				04E7C11A204BAA62004577C1 /* ShadowView.swift in Sources */,
 				04E7C120204C1DF8004577C1 /* CreatePostVC.swift in Sources */,
 				0413D93D2047D36D00B74E38 /* AppDelegate.swift in Sources */,
 				0413D93F2047D36D00B74E38 /* FeedVC.swift in Sources */,
 				04FE42F0204806F600EB634C /* DataService.swift in Sources */,
+				04011D93204D059A009D686B /* Message.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
