@@ -25,6 +25,7 @@ class UserCell: UITableViewCell {
         }
     }
     
+    // iPad에서 checkImage가 반응이 없는 오류가 남 (셀을 직접 클릭하면 변화가 없고 그 밑의 tableView쪽을 클릭하거나 셀을 위아래로 움직이면 변한다. 단순한 버그인건가?)
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
         if selected {
