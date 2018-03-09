@@ -290,7 +290,7 @@ static NSString* const s_kWebFingerError               = @"WebFinger request was
              // on the server.
              if ([oauthError isEqualToString:@"invalid_instance"])
              {
-                 [_aadCache addInvalidRecord:authority oauthError:adError context:requestParams];
+                 [self->_aadCache addInvalidRecord:authority oauthError:adError context:requestParams];
              }
              
              completionBlock(NO, adError);
@@ -299,7 +299,7 @@ static NSString* const s_kWebFingerError               = @"WebFinger request was
          
          
          ADAuthenticationError *adError = nil;
-         if (![_aadCache processMetadata:response[@"metadata"]
+         if (![self->_aadCache processMetadata:response[@"metadata"]
                                authority:authority
                                  context:requestParams
                                    error:&adError])

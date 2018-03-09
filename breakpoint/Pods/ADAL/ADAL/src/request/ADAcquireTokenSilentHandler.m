@@ -56,21 +56,21 @@
     [self getAccessToken:^(ADAuthenticationResult *result)
      {
          // Logic for returning extended lifetime token
-         if ([_requestParams extendedLifetime] && [self isServerUnavailable:result] && _extendedLifetimeAccessTokenItem)
+         if ([self->_requestParams extendedLifetime] && [self isServerUnavailable:result] && self->_extendedLifetimeAccessTokenItem)
          {
-             _extendedLifetimeAccessTokenItem.expiresOn =
-             [_extendedLifetimeAccessTokenItem.additionalServer valueForKey:@"ext_expires_on"];
+             self->_extendedLifetimeAccessTokenItem.expiresOn =
+             [self->_extendedLifetimeAccessTokenItem.additionalServer valueForKey:@"ext_expires_on"];
              
              // give the stale token as result
-             [ADLogger logToken:_extendedLifetimeAccessTokenItem.accessToken
+             [ADLogger logToken:self->_extendedLifetimeAccessTokenItem.accessToken
                       tokenType:@"AT (extended lifetime)"
-                      expiresOn:_extendedLifetimeAccessTokenItem.expiresOn
+                      expiresOn:self->_extendedLifetimeAccessTokenItem.expiresOn
                         context:@"Returning"
-                  correlationId:_requestParams.correlationId];
+                  correlationId:self->_requestParams.correlationId];
              
-             result = [ADAuthenticationResult resultFromTokenCacheItem:_extendedLifetimeAccessTokenItem
+             result = [ADAuthenticationResult resultFromTokenCacheItem:self->_extendedLifetimeAccessTokenItem
                                              multiResourceRefreshToken:NO
-                                                         correlationId:[_requestParams correlationId]];
+                                                         correlationId:[self->_requestParams correlationId]];
              [result setExtendedLifeTimeToken:YES];
          }
          
@@ -147,20 +147,20 @@
          
          //Always ensure that the cache item has all of these set, especially in the broad token case, where the passed item
          //may have empty "resource" property:
-         resultItem.resource = [_requestParams resource];
-         resultItem.clientId = [_requestParams clientId];
-         resultItem.authority = [_requestParams authority];
+         resultItem.resource = [self->_requestParams resource];
+         resultItem.clientId = [self->_requestParams clientId];
+         resultItem.authority = [self->_requestParams authority];
          
          
-         ADAuthenticationResult *result = [resultItem processTokenResponse:response fromRefresh:YES requestCorrelationId:_requestParams.correlationId];
+         ADAuthenticationResult *result = [resultItem processTokenResponse:response fromRefresh:YES requestCorrelationId:self->_requestParams.correlationId];
          if (cacheItem)//The request came from the cache item, update it:
          {
-             [[_requestParams tokenCache] updateCacheToResult:result
+             [[self->_requestParams tokenCache] updateCacheToResult:result
                                                     cacheItem:resultItem
                                                  refreshToken:refreshToken
-                                                      context:_requestParams];
+                                                            context:self->_requestParams];
          }
-         result = [ADAuthenticationContext updateResult:result toUser:[_requestParams identifier]];//Verify the user (just in case)
+         result = [ADAuthenticationContext updateResult:result toUser:[self->_requestParams identifier]];//Verify the user (just in case)
          
          completionBlock(result);
          
@@ -210,10 +210,10 @@
                      completionBlock:^(ADAuthenticationResult *result)
      {
          ADTelemetryAPIEvent* event = [[ADTelemetryAPIEvent alloc] initWithName:AD_TELEMETRY_EVENT_TOKEN_GRANT
-                                                                        context:_requestParams];
+                                                                        context:self->_requestParams];
          [event setGrantType:AD_TELEMETRY_VALUE_BY_REFRESH_TOKEN];
          [event setResultStatus:[result status]];
-         [[ADTelemetry sharedInstance] stopEvent:[_requestParams telemetryRequestId] event:event];
+         [[ADTelemetry sharedInstance] stopEvent:[self->_requestParams telemetryRequestId] event:event];
 
          NSString* resultStatus = @"Succeded";
          
@@ -239,8 +239,8 @@
              msg = [NSString stringWithFormat:@"Acquire Token with Refresh Token %@.", resultStatus];
          }
          
-         AD_LOG_INFO(_requestParams.correlationId, @"%@", msg);
-         AD_LOG_INFO_PII(_requestParams.correlationId, @"%@ clientId: '%@', resource: '%@'", msg, _requestParams.clientId, _requestParams.resource);
+         AD_LOG_INFO(self->_requestParams.correlationId, @"%@", msg);
+         AD_LOG_INFO_PII(self->_requestParams.correlationId, @"%@ clientId: '%@', resource: '%@'", msg, self->_requestParams.clientId, self->_requestParams.resource);
          
          if ([ADAuthenticationContext isFinalResult:result])
          {
@@ -404,11 +404,11 @@
                completionBlock:completionBlock
                       fallback:^(ADAuthenticationResult* result)
      {
-         NSString* familyId = _mrrtItem.familyId;
+         NSString* familyId = self->_mrrtItem.familyId;
          
          // Clear out the MRRT as it's not good anymore anyways
-         _mrrtItem = nil;
-         _mrrtResult = result;
+         self->_mrrtItem = nil;
+         self->_mrrtResult = result;
          
          // Try the FRT in case it's there.
          [self tryFRT:familyId completionBlock:completionBlock];
@@ -460,14 +460,14 @@
      {
          (void)result;
          
-         if (_mrrtItem)
+         if (self->_mrrtItem)
          {
              // If we still have an MRRT item retrieved in this request then attempt to use that.
              [self tryMRRT:completionBlock];
              return;
          }
          
-         completionBlock(_mrrtResult);
+         completionBlock(self->_mrrtResult);
      }];
 }
 

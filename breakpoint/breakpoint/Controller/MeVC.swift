@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import GoogleSignIn
 
 class MeVC: UIViewController {
     @IBOutlet weak var profileImage: UIImageView!
@@ -29,6 +30,7 @@ class MeVC: UIViewController {
         let logoutAction = UIAlertAction(title: "응", style: .cancel) { (buttonTapped) in
             do {
                 try Auth.auth().signOut()
+                GIDSignIn.sharedInstance().signOut()
                 let loginVC = self.storyboard?.instantiateViewController(withIdentifier: "AuthVC") as? AuthVC
                 self.present(loginVC!, animated: true, completion: nil)
             } catch {

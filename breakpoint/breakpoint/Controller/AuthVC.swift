@@ -8,10 +8,15 @@
 
 import UIKit
 import Firebase
+import GoogleSignIn
 
-class AuthVC: UIViewController {
+class AuthVC: UIViewController, GIDSignInUIDelegate {
+    @IBOutlet weak var mainStackView: UIStackView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        // Google SignIn
+        GIDSignIn.sharedInstance().uiDelegate = self
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -31,7 +36,7 @@ class AuthVC: UIViewController {
     }
     
     @IBAction func googlePlusSignInWasPressed(_ sender: Any) {
-        
+        GIDSignIn.sharedInstance().signIn()
     }
     
     // MS login (for Swift 4...)

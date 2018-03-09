@@ -8,17 +8,20 @@
 
 import UIKit
 import Firebase
+import GoogleSignIn
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
-
+class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
     var window: UIWindow?
-
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // 응용 프로그램 시작 후 사용자 지정을 위한 오버라이드 포인트.
         // Firebase 구성
         FirebaseApp.configure()
+        
+        // Google SignIn 구성
+        GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
+        GIDSignIn.sharedInstance().delegate = self
         
         if Auth.auth().currentUser == nil {
             let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
@@ -27,6 +30,55 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             window?.rootViewController?.present(authVC, animated: true, completion: nil)
         }
         return true
+    }
+    
+    @available(iOS 9.0, *)
+    func application(_ application: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any]) -> Bool {
+            return GIDSignIn.sharedInstance().handle(url, sourceApplication:options[UIApplicationOpenURLOptionsKey.sourceApplication] as? String, annotation: [:])
+    }
+    
+    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error?) {
+        if let error = error {
+            print("An error occured during Google Authentication: \(error.localizedDescription)")
+            return
+        }
+        
+        guard let authentication = user.authentication else { return }
+        let credential = GoogleAuthProvider.credential(withIDToken: authentication.idToken, accessToken: authentication.accessToken)
+        Auth.auth().signIn(with: credential) { (user, error) in
+            if (error) != nil {
+                print("Google Authentification Fail")
+            } else {
+                print("Google Authentification Success")
+                
+                // users 테이블에 없을 시(최초 로그인) 테이블에 정보 추가
+                DataService.instance.REF_USERS.observe(.value) { (userSnapshot) in
+                    guard let userSnapshot = userSnapshot.children.allObjects as? [DataSnapshot] else { return }
+                    let uid = Auth.auth().currentUser?.uid
+                    let email: String = (Auth.auth().currentUser?.email)!
+                    for user in userSnapshot {
+                        if user.key.contains((Auth.auth().currentUser?.uid)!) == true {
+                            self.moveToMainVC()
+                            return
+                        }
+                    }
+                    DataService.instance.createDBUser(uid: uid!, userData: ["provider": "Google", "email": email])
+                    self.moveToMainVC()
+                }
+            }
+        }
+    }
+    
+    func moveToMainVC() {
+        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+        let mainVC = storyboard.instantiateViewController(withIdentifier: "MainVC")
+        let appDelegate = UIApplication.shared.delegate
+        appDelegate?.window??.rootViewController = mainVC
+    }
+    
+    func sign(_ signIn: GIDSignIn!, didDisconnectWith user: GIDGoogleUser!, withError error: Error!) {
+        // Perform any operations when the user disconnects from app here.
+        // ...
     }
 
     func applicationWillResignActive(_ application: UIApplication) {

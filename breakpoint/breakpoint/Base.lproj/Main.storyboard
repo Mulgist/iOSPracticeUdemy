@@ -918,7 +918,7 @@
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="googlePlusSignInWasPressed:" destination="9YF-6e-tQR" eventType="touchUpInside" id="KLT-1b-i5q"/>
+                                                    <action selector="googlePlusSignInWasPressed:" destination="9YF-6e-tQR" eventType="touchUpInside" id="zfk-or-ICz"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lRW-qX-K1T">
@@ -981,6 +981,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Dhw-GM-OkI"/>
                     </view>
+                    <connections>
+                        <outlet property="mainStackView" destination="yLi-7H-dng" id="ldU-cz-1Ne"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ayo-oo-xft" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

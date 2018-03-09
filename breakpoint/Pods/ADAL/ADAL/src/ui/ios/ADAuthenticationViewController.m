@@ -179,7 +179,7 @@ NSString *const AD_FAILED_NO_CONTROLLER = @"The Application does not have a curr
     }
     
     dispatch_async(dispatch_get_main_queue(), ^{
-        [_parentController presentViewController:navController animated:YES completion:nil];
+        [self->_parentController presentViewController:navController animated:YES completion:nil];
     });
 }
 

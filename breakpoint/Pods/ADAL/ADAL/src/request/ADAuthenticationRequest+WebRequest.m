@@ -62,12 +62,12 @@
          
          //Prefill the known elements in the item. These can be overridden by the response:
          ADTokenCacheItem* item = [ADTokenCacheItem new];
-         item.resource = [_requestParams resource];
-         item.clientId = [_requestParams clientId];
+         item.resource = [self->_requestParams resource];
+         item.clientId = [self->_requestParams clientId];
          item.authority = authority;
          ADAuthenticationResult* result = [item processTokenResponse:response
                                                          fromRefresh:NO
-                                                requestCorrelationId:[_requestParams correlationId]];
+                                                requestCorrelationId:[self->_requestParams correlationId]];
          completionBlock(result);
          
          [req invalidate];
@@ -240,7 +240,7 @@
                          error = [ADAuthenticationError errorFromAuthenticationError:AD_ERROR_SERVER_AUTHORIZATION_CODE
                                                                         protocolCode:nil
                                                                         errorDetails:@"The authorization server did not return a valid authorization code."
-                                                                       correlationId:[_requestParams correlationId]];
+                                                                       correlationId:[self->_requestParams correlationId]];
                      }
                      
                      [self setCloudInstanceHostname:[parameters objectForKey:AUTH_CLOUD_INSTANCE_HOST_NAME]];
@@ -301,7 +301,7 @@
              if (!endURL)
              {
                  // If the request was not silent only then launch the webview
-                 if (!_silent)
+                 if (!self->_silent)
                  {
                      [self launchWebView:startUrl
                          completionBlock:requestCompletion];

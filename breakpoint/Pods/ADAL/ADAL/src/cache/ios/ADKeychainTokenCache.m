@@ -178,7 +178,7 @@ static ADKeychainTokenCache* s_defaultCache = nil;
         sWipeQuery = @{
                        (id)kSecClass                : (id)kSecClassGenericPassword,
                        (id)kSecAttrGeneric          : [s_wipeLibraryString dataUsingEncoding:NSUTF8StringEncoding],
-                       (id)kSecAttrAccessGroup      : _sharedGroup,
+                       (id)kSecAttrAccessGroup      : self->_sharedGroup,
                        (id)kSecAttrAccount          : @"TokenWipe",
                        };
     });
