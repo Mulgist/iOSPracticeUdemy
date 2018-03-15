@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		041E2884205A967700C7FDF5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041E2883205A967700C7FDF5 /* AppDelegate.swift */; };
 		041E2886205A967700C7FDF5 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 041E2885205A967700C7FDF5 /* art.scnassets */; };
-		041E2888205A967700C7FDF5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041E2887205A967700C7FDF5 /* ViewController.swift */; };
+		041E2888205A967700C7FDF5 /* RampPlacerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041E2887205A967700C7FDF5 /* RampPlacerVC.swift */; };
 		041E288B205A967700C7FDF5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 041E2889205A967700C7FDF5 /* Main.storyboard */; };
 		041E288D205A967700C7FDF5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 041E288C205A967700C7FDF5 /* Assets.xcassets */; };
 		041E2890205A967700C7FDF5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 041E288E205A967700C7FDF5 /* LaunchScreen.storyboard */; };
@@ -19,7 +19,7 @@
 		041E2880205A967700C7FDF5 /* ramp-up.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ramp-up.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		041E2883205A967700C7FDF5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		041E2885205A967700C7FDF5 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
-		041E2887205A967700C7FDF5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		041E2887205A967700C7FDF5 /* RampPlacerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RampPlacerVC.swift; sourceTree = "<group>"; };
 		041E288A205A967700C7FDF5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		041E288C205A967700C7FDF5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		041E288F205A967700C7FDF5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -56,15 +56,23 @@
 		041E2882205A967700C7FDF5 /* ramp-up */ = {
 			isa = PBXGroup;
 			children = (
+				041E2897205A98C100C7FDF5 /* Controller */,
 				041E2883205A967700C7FDF5 /* AppDelegate.swift */,
 				041E2885205A967700C7FDF5 /* art.scnassets */,
-				041E2887205A967700C7FDF5 /* ViewController.swift */,
 				041E2889205A967700C7FDF5 /* Main.storyboard */,
 				041E288C205A967700C7FDF5 /* Assets.xcassets */,
 				041E288E205A967700C7FDF5 /* LaunchScreen.storyboard */,
 				041E2891205A967700C7FDF5 /* Info.plist */,
 			);
 			path = "ramp-up";
+			sourceTree = "<group>";
+		};
+		041E2897205A98C100C7FDF5 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				041E2887205A967700C7FDF5 /* RampPlacerVC.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,7 +148,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				041E2888205A967700C7FDF5 /* ViewController.swift in Sources */,
+				041E2888205A967700C7FDF5 /* RampPlacerVC.swift in Sources */,
 				041E2884205A967700C7FDF5 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
